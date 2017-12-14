@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/project1solution.iml" filepath="$PROJECT_DIR$/project1solution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bitcoinTranscationSimulator.iml" filepath="$PROJECT_DIR$/bitcoinTranscationSimulator.iml" />
     </modules>
   </component>
 </project>
