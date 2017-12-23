@@ -1,6 +1,10 @@
-package edu.nyu.crypto.csci3033;
+package crypto.test;
 
-import edu.nyu.crypto.csci3033.transactions.*;
+import crypto.transactions.MultiSigTransaction;
+import crypto.transactions.PayToPubKey;
+import crypto.transactions.PayToPubKeyHash;
+import crypto.transactions.ScriptTransaction;
+import crypto.transactions.*;
 import org.bitcoinj.core.*;
 import org.bitcoinj.kits.WalletAppKit;
 import org.bitcoinj.params.MainNetParams;

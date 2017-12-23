@@ -1,16 +1,13 @@
-package edu.nyu.crypto.csci3033.transactions;
+package crypto.transactions;
 
-import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.core.Transaction;
-import org.bitcoinj.core.Utils;
 import org.bitcoinj.crypto.DeterministicKey;
 import org.bitcoinj.crypto.TransactionSignature;
 import org.bitcoinj.script.Script;
 import org.bitcoinj.script.ScriptBuilder;
 
 import java.io.File;
-import java.math.BigInteger;
 
 import static org.bitcoinj.script.ScriptOpCodes.*;
 

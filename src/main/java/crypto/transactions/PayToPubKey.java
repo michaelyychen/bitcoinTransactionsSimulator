@@ -1,4 +1,4 @@
-package edu.nyu.crypto.csci3033.transactions;
+package crypto.transactions;
 
 import org.bitcoinj.core.*;
 import org.bitcoinj.crypto.DeterministicKey;
@@ -7,52 +7,26 @@ import org.bitcoinj.script.Script;
 import org.bitcoinj.script.ScriptBuilder;
 
 import java.io.File;
-import java.math.BigInteger;
 
 import static org.bitcoinj.script.ScriptOpCodes.*;
-import static org.bitcoinj.script.ScriptOpCodes.OP_VERIFY;
 
 /**
  * Created by bbuenz on 24.09.15.
  */
-public class PayToPubKeyHash extends ScriptTransaction {
-    // TODO: Problem 1
-    private ECKey key;
+public class PayToPubKey extends ScriptTransaction {
+    private DeterministicKey key;
 
-    public PayToPubKeyHash(NetworkParameters parameters, File file, String password) {
-
+    public PayToPubKey(NetworkParameters parameters, File file, String password) {
         super(parameters, file, password);
         key = getWallet().freshReceiveKey();
-
-
     }
-
-    // for external vanity address
-    public PayToPubKeyHash(NetworkParameters parameters, File file, String password, String priv) {
-
-        super(parameters, file, password);
-        try {
-            key = new DumpedPrivateKey(parameters, priv).getKey();
-        } catch (AddressFormatException e) {
-            e.printStackTrace();
-        }
-
-    }
-
 
     @Override
     public Script createInputScript() {
-
         ScriptBuilder builder = new ScriptBuilder();
-
-        builder.op(OP_DUP);
-        builder.op(OP_HASH160);
-        builder.data(key.getPubKeyHash());
-        builder.op(OP_EQUALVERIFY);
+        builder.data(key.getPubKey());
         builder.op(OP_CHECKSIG);
-
         return builder.build();
-
     }
 
     @Override
@@ -61,7 +35,6 @@ public class PayToPubKeyHash extends ScriptTransaction {
 
         ScriptBuilder builder = new ScriptBuilder();
         builder.data(txSig.encodeToBitcoin());
-        builder.data(key.getPubKey());
         return builder.build();
     }
 }

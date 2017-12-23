@@ -1,16 +1,12 @@
-package edu.nyu.crypto.csci3033.transactions;
+package crypto.transactions;
 
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.core.Transaction;
 import org.bitcoinj.core.Utils;
 import org.bitcoinj.script.Script;
-import org.bitcoinj.script.ScriptBuilder;
 
 import java.io.File;
 import java.math.BigInteger;
-import java.net.UnknownHostException;
-
-import static org.bitcoinj.script.ScriptOpCodes.*;
 
 /**
  * Created by bbuenz on 24.09.15.

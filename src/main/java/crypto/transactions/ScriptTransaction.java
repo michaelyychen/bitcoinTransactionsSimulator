@@ -1,12 +1,10 @@
-package edu.nyu.crypto.csci3033.transactions;
+package crypto.transactions;
 
 import com.google.common.collect.ImmutableSet;
 import org.bitcoinj.core.*;
 import org.bitcoinj.crypto.TransactionSignature;
 import org.bitcoinj.kits.WalletAppKit;
-import org.bitcoinj.params.MainNetParams;
 import org.bitcoinj.script.Script;
-import org.bitcoinj.script.ScriptBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongycastle.util.encoders.Hex;
