@@ -15,7 +15,7 @@ import static org.bitcoinj.script.ScriptOpCodes.*;
  * Created by bbuenz on 24.09.15.
  */
 public class MultiSigTransaction extends ScriptTransaction {
-    // TODO: Problem 3
+
     private DeterministicKey bankKey;
     private DeterministicKey customerKey1;
     private DeterministicKey customerKey2;

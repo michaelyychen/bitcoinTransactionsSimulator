@@ -13,7 +13,7 @@ import static org.bitcoinj.script.ScriptOpCodes.*;
  * Created by bbuenz on 24.09.15.
  */
 public class PayToPubKeyHash extends ScriptTransaction {
-    // TODO: Problem 1
+
     private ECKey key;
 
     public PayToPubKeyHash(NetworkParameters parameters, File file, String password) {
@@ -24,7 +24,6 @@ public class PayToPubKeyHash extends ScriptTransaction {
 
     }
 
-    // for external vanity address
     public PayToPubKeyHash(NetworkParameters parameters, File file, String password, String priv) {
 
         super(parameters, file, password);
