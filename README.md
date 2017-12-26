@@ -5,7 +5,7 @@ This simulator create transactions and post them to the Bitcoin blockchain on ei
 In the <i>transactions</i> package you'll find 4 classes implementing different Bitcoin transactions.
 1. PayToPubKey - standard P2PK transaction with specifying the output public address with proper signature.
 2. PayToPubKeyHash - standard P2PKH transaction with specifying the hash of output public address.
-3. LinearEquationTransaction - nonstandard transaction such that only the solution to the linear equation can redeem the transaction
+3. LinearEquationTransaction - nonstandard transaction which can only be redeeemed by the solution of the linear equation solution
 4. MutiSigTransaction - requires 1-outof-3 signature and an middleman to redeem the transaction
 
 ## How to Run it 
